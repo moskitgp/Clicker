@@ -14,7 +14,7 @@ public class OnionPerSec : MonoBehaviour {
 	}
 
 	void Update (){
-		opsDisplay.text = GetOnionPerSec () + " ceb/sek";
+		opsDisplay.text = GetOnionPerSec () + "\nceb/sek";
 	}
 
 	public float GetOnionPerSec(){

@@ -16,18 +16,22 @@ public class Click : MonoBehaviour {
 	}
 
 	void Update(){
-		onionDisplay.text = "Cebule: " + onionsCount.ToString("F0"); // 
-		OPC.text = onionsPerClick + " ceb/klik";
+		onionDisplay.text = "Cebule\n" + onionsCount.ToString("F0"); // 
+		OPC.text = onionsPerClick + "\nceb/klik";
 
 		onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; //
-		onionsSpendInTotalText.text = "Wydane Cebule\n" + onionsSpendInTotal.ToString();
+		onionsSpendInTotalText.text =  onionsSpendInTotal.ToString() + "\nWydane cebule";
 
 		if (Input.GetKeyDown (KeyCode.ScrollLock)) {
-			onionsPerClick += 100f; // debug cheat adding 100 onions/click
+			CheatClick (); // debug cheat adding 100 onions/click
 		}
 	}
 
 	public void Clicked (){		
 		onionsCount += onionsPerClick; // what happens when user clicks
+	}
+
+	public void CheatClick (){
+		onionsPerClick += 100f; // debug cheat adding 100 onions/click
 	}
 }
