@@ -32,6 +32,6 @@ public class Click : MonoBehaviour {
 	}
 
 	public void CheatClick (){
-		onionsPerClick += 100f; // debug cheat adding 100 onions/click
+		onionsPerClick += 10000f; // debug cheat adding 100 onions/click
 	}
 }
