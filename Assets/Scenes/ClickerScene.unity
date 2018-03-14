@@ -148,8 +148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -170}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: 10, y: -151}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &48220086
 MonoBehaviour:
@@ -252,7 +252,7 @@ MonoBehaviour:
   cost: 200
   count: 0
   clickMultiplier: 5
-  itemName: 'Wiadro #2'
+  itemName: Medium Bucket
   upgradeLevel: 0
   itemB: {fileID: 241170496}
 --- !u!1 &99640578
@@ -311,7 +311,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -471,8 +471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -330}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: 10, y: -291}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &241170498
 MonoBehaviour:
@@ -575,7 +575,7 @@ MonoBehaviour:
   cost: 1000
   count: 0
   clickMultiplier: 10
-  itemName: 'Wiadro #3'
+  itemName: Large Bucket
   upgradeLevel: 0
   itemB: {fileID: 289343134}
 --- !u!1 &242554843
@@ -613,8 +613,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -10}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: -10, y: -11}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &242554845
 MonoBehaviour:
@@ -632,7 +632,7 @@ MonoBehaviour:
   cost: 100
   tickValue: 1
   count: 0
-  itemName: 'Pracownik #1'
+  itemName: Simple Worker
   itemB: {fileID: 1449928487}
   itemLevel: 0
 --- !u!114 &242554846
@@ -776,7 +776,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -831,8 +831,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -490}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: 10, y: -431}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &289343136
 MonoBehaviour:
@@ -850,7 +850,7 @@ MonoBehaviour:
   cost: 4500
   count: 0
   clickMultiplier: 25
-  itemName: 'Wiadro #4'
+  itemName: Big Bucket
   upgradeLevel: 0
   itemB: {fileID: 1215922308}
 --- !u!114 &289343137
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.259}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1736,7 +1736,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1936,8 +1936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -650}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: -10, y: -571}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &814809951
 MonoBehaviour:
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   cost: 25000
   tickValue: 50
   count: 0
-  itemName: 'Pracownik #5'
+  itemName: Robo-Worker
   itemB: {fileID: 814809949}
   itemLevel: 0
 --- !u!114 &814809952
@@ -2078,8 +2078,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: 10, y: -11}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &900400360
 MonoBehaviour:
@@ -2182,7 +2182,7 @@ MonoBehaviour:
   cost: 30
   count: 0
   clickMultiplier: 1
-  itemName: 'Wiadro #1'
+  itemName: Small Bucket
   upgradeLevel: 0
   itemB: {fileID: 48220084}
 --- !u!1 &939854922
@@ -2472,7 +2472,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2687,7 +2687,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2772,7 +2772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Onions Spend
+  m_Text: Onion Spend
 --- !u!222 &1199128505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2814,8 +2814,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -650}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: 10, y: -571}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1215922310
 MonoBehaviour:
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   cost: 12000
   count: 0
   clickMultiplier: 60
-  itemName: 'Wiadro #5'
+  itemName: Mega Bucket
   upgradeLevel: 0
   itemB: {fileID: 1215922308}
 --- !u!114 &1215922311
@@ -2953,8 +2953,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50.26, y: -0.08}
-  m_SizeDelta: {x: -105.19, y: -5.65}
+  m_AnchoredPosition: {x: 48.7, y: -0.08}
+  m_SizeDelta: {x: -102.07, y: -5.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355638437
 MonoBehaviour:
@@ -2982,13 +2982,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Wyrwij Cebul\u0119"
+  m_Text: Harvest Onion
 --- !u!222 &1355638438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3030,8 +3030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -170}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: -10, y: -151}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1449928489
 MonoBehaviour:
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   cost: 600
   tickValue: 5
   count: 0
-  itemName: 'Pracownik #2'
+  itemName: Good Worker
   itemB: {fileID: 2101530594}
   itemLevel: 0
 --- !u!114 &1449928490
@@ -3193,7 +3193,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3267,7 +3267,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3341,7 +3341,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3650,7 +3650,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3829,8 +3829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -490}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: -10, y: -431}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1838713535
 MonoBehaviour:
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   cost: 8000
   tickValue: 35
   count: 0
-  itemName: 'Pracownik #4'
+  itemName: Super Worker
   itemB: {fileID: 814809949}
   itemLevel: 0
 --- !u!114 &1838713536
@@ -4065,7 +4065,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab6257d2d0023954bb0953ced4c42a1a, type: 3}
-    m_FontSize: 28
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -4311,8 +4311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -330}
-  m_SizeDelta: {x: 200, y: 160}
+  m_AnchoredPosition: {x: -10, y: -291}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2101530596
 MonoBehaviour:
@@ -4330,7 +4330,7 @@ MonoBehaviour:
   cost: 1850
   tickValue: 15
   count: 0
-  itemName: 'Pracownik #3'
+  itemName: Great Worker
   itemB: {fileID: 1838713533}
   itemLevel: 0
 --- !u!114 &2101530597

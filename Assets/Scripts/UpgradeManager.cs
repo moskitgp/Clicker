@@ -26,7 +26,7 @@ public class UpgradeManager : MonoBehaviour {
 	}
 
 	void Update(){
-		itemInfo.text = itemName + "\nPoziom: " + upgradeLevel + "\nKoszt: " + cost + "\nMnożnik: " + clickMultiplier;
+		itemInfo.text = itemName + "\nLevel: " + upgradeLevel + "\nCost: " + cost + "\nMultiplier: " + clickMultiplier;
 		if (upgradeLevel >= 10) {
 			Unlock ();		
 		}

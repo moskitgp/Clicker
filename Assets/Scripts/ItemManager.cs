@@ -27,7 +27,7 @@ public class ItemManager : MonoBehaviour {
 	}
 
 	void Update (){
-		itemInfo.text = itemName + "\nPoziom: " + itemLevel + "\nKoszt: " + cost + "\nCebule: " + tickValue + "/s";
+		itemInfo.text = itemName + "\nLevel: " + itemLevel + "\nCost: " + cost + "\nOnions: " + tickValue + "/s";
 		if (itemLevel >= 10) {
 			Unlock ();		
 		}
