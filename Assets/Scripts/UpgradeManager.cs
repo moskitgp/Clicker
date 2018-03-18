@@ -11,7 +11,7 @@ public class UpgradeManager : MonoBehaviour {
 	public int count = 0;
 	public int clickMultiplier;
 	public string itemName;
-	public int upgradeLevel = 0;
+	public int upgradeLevel;
 	public GameObject itemB;
 	public static float onionsSpendOnUpgrades = 0f;
 	private float _newCost;
@@ -43,4 +43,11 @@ public class UpgradeManager : MonoBehaviour {
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
 		}
 	}
+
+	/*public void SaveGame(){
+		PlayerPrefs.SetInt (name, upgradeLevel);
+	}
+	public void LoadGame(){
+		PlayerPrefs.GetInt (name);	
+	}*/
 }
