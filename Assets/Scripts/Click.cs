@@ -36,7 +36,7 @@ public class Click : MonoBehaviour {
 
 	public void Clicked (){		
 		onionsCount += onionsPerClick; // what happens when user clicks
-		Debug.Log ("Click");
+		Debug.Log ("Click, "+ "Onions: " + onionsCount);
 	}
 
 	public void CheatClick (){
@@ -46,10 +46,12 @@ public class Click : MonoBehaviour {
 
 	public void SaveGame(){
 		PlayerPrefs.SetFloat ("onionsPerClick", onionsPerClick);
+		PlayerPrefs.SetFloat ("onionsCount", onionsCount);
 		Debug.Log ("Save");
 	}
 	public void LoadGame(){			
 		onionsPerClick = PlayerPrefs.GetFloat ("onionsPerClick");
+		onionsCount = PlayerPrefs.GetFloat ("onionsCount");
 		Debug.Log ("Load");
 	}
 }

@@ -59,7 +59,7 @@ public class UpgradeManager : MonoBehaviour {
 		PlayerPrefs.SetFloat ("onionsSpendOnUpgrades", onionsSpendOnUpgrades);
 	}
 	public void LoadGame(){		
-		onionsSpendOnUpgrades = PlayerPrefs.GetInt (name);
+		upgradeLevel = PlayerPrefs.GetInt (name);
 		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
 	}
 }

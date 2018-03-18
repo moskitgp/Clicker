@@ -56,9 +56,12 @@ public class ItemManager : MonoBehaviour {
 		PlayerPrefs.SetInt (name, itemLevel);
 		PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
 
+		PlayerPrefs.SetInt(name + "_count", count);
 	}
-	public void LoadGame(){		
+	public void LoadGame(){        
 		itemLevel = PlayerPrefs.GetInt (name);
 		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
+
+		count = PlayerPrefs.GetInt(name + "_count");
 	}
 }
