@@ -29,6 +29,7 @@ public class UpgradeManager : MonoBehaviour {
 
 	void Update(){
 		itemInfo.text = itemName + "\nLevel: " + upgradeLevel + "\nCost: " + cost + "\nMultiplier: " + clickMultiplier;
+
 		if (upgradeLevel >= 10) {
 			Unlock ();		
 		}
@@ -37,6 +38,8 @@ public class UpgradeManager : MonoBehaviour {
 			SaveGame();	}
 		if (Input.GetKeyDown (KeyCode.L)) {
 			LoadGame();	}
+		if (Input.GetKeyDown (KeyCode.X)) {
+			PlayerPrefs.DeleteAll(); }
 
 
 		//Debug.Log (gameObject.name + ": " + PlayerPrefs.GetInt(name));
@@ -55,11 +58,17 @@ public class UpgradeManager : MonoBehaviour {
 	}
 
 	public void SaveGame(){
-		PlayerPrefs.SetInt (name, upgradeLevel);
+		PlayerPrefs.SetInt (name + "_level", upgradeLevel);
+		PlayerPrefs.SetInt (name + "_count", count);
+		//PlayerPrefs.SetFloat (name + "_cost", cost);
+
 		PlayerPrefs.SetFloat ("onionsSpendOnUpgrades", onionsSpendOnUpgrades);
 	}
 	public void LoadGame(){		
-		upgradeLevel = PlayerPrefs.GetInt (name);
+		upgradeLevel = PlayerPrefs.GetInt (name + "_level");
+		count = PlayerPrefs.GetInt (name + "_count");
+		//cost = PlayerPrefs.GetInt (name + "_cost");
+
 		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
 	}
 }

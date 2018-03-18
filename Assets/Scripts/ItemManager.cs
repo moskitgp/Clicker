@@ -28,6 +28,7 @@ public class ItemManager : MonoBehaviour {
 
 	void Update (){
 		itemInfo.text = itemName + "\nLevel: " + itemLevel + "\nCost: " + cost + "\nOnions: " + tickValue + "/s";
+
 		if (itemLevel >= 10) {
 			Unlock ();		
 		}
@@ -53,15 +54,17 @@ public class ItemManager : MonoBehaviour {
 	}
 
 	public void SaveGame(){
-		PlayerPrefs.SetInt (name, itemLevel);
-		PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
-
+		PlayerPrefs.SetInt (name + "_level", itemLevel);
 		PlayerPrefs.SetInt(name + "_count", count);
+		//PlayerPrefs.SetFloat(name + "_cost", cost);
+
+		PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
 	}
 	public void LoadGame(){        
-		itemLevel = PlayerPrefs.GetInt (name);
-		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
-
+		itemLevel = PlayerPrefs.GetInt (name + "_level");
 		count = PlayerPrefs.GetInt(name + "_count");
+		//cost = PlayerPrefs.GetFloat(name + "_cost");
+
+		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
 	}
 }
