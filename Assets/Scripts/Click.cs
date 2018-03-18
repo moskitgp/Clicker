@@ -24,14 +24,17 @@ public class Click : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.ScrollLock)) {
 			CheatClick (); // debug cheat adding 100 onions/click
+			Debug.Log ("CheatKey");
 		}
 	}
 
 	public void Clicked (){		
 		onionsCount += onionsPerClick; // what happens when user clicks
+		Debug.Log ("Click");
 	}
 
 	public void CheatClick (){
 		onionsPerClick += 10000f; // debug cheat adding 100 onions/click
+		Debug.Log ("CheatClick");
 	}
 }

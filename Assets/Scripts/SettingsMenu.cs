@@ -39,20 +39,24 @@ public class SettingsMenu : MonoBehaviour {
 	{
 		Resolution resolution = resolutions [resolutionIndex];
 		Screen.SetResolution (resolution.width, resolution.height, Screen.fullScreen);
+		Debug.Log ("Resolution: " + resolution.width + "x" + resolution.height);
 	}
 
 	public void SetVolume(float volume)
 	{
 		audioMixer.SetFloat("volume", volume);
+		Debug.Log (volume);
 	}
 
 	public void SetQuality(int qualityIndex)
 	{
 		QualitySettings.SetQualityLevel (qualityIndex);
+		Debug.Log ("Quality level: " + qualityIndex);
 	}
 
 	public void SetFullscreen(bool isFullscreen)
 	{
 		Screen.fullScreen = isFullscreen;
+		Debug.Log ("Fullscreen: " + isFullscreen);
 	}
 }
