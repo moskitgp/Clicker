@@ -17,6 +17,8 @@ public class UpgradeManager : MonoBehaviour {
 	private float _newCost;
 	private float baseCost;
 
+	//public GameObject upgrade1;
+
 	void Start(){
 		baseCost = cost;
 	}
@@ -30,6 +32,14 @@ public class UpgradeManager : MonoBehaviour {
 		if (upgradeLevel >= 10) {
 			Unlock ();		
 		}
+
+		if (Input.GetKeyDown (KeyCode.S)) {
+			SaveGame();	}
+		if (Input.GetKeyDown (KeyCode.L)) {
+			LoadGame();	}
+
+
+		//Debug.Log (gameObject.name + ": " + PlayerPrefs.GetInt(name));
 	}
 
 	public void PurchasedUpgrade(){
@@ -44,10 +54,12 @@ public class UpgradeManager : MonoBehaviour {
 		}
 	}
 
-	/*public void SaveGame(){
+	public void SaveGame(){
 		PlayerPrefs.SetInt (name, upgradeLevel);
+		PlayerPrefs.SetFloat ("onionsSpendOnUpgrades", onionsSpendOnUpgrades);
 	}
-	public void LoadGame(){
-		PlayerPrefs.GetInt (name);	
-	}*/
+	public void LoadGame(){		
+		onionsSpendOnUpgrades = PlayerPrefs.GetInt (name);
+		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
+	}
 }

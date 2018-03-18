@@ -16,16 +16,22 @@ public class Click : MonoBehaviour {
 	}
 
 	void Update(){
-		onionDisplay.text = "Onions\n" + onionsCount.ToString("F0"); // 
+		
+		onionDisplay.text = "Onions\n" + onionsCount.ToString("F0"); 
 		OPC.text = onionsPerClick + "\nOnions/Click";
 
-		onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; //
-		onionsSpendInTotalText.text =  onionsSpendInTotal.ToString() + "\nOnions Spent";
+		onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; 
+		onionsSpendInTotalText.text = onionsSpendInTotal.ToString() + "\nOnions Spent";
 
 		if (Input.GetKeyDown (KeyCode.ScrollLock)) {
 			CheatClick (); // debug cheat adding 100 onions/click
 			Debug.Log ("CheatKey");
 		}
+
+		if (Input.GetKeyDown (KeyCode.S)) {
+			SaveGame();}
+		if (Input.GetKeyDown (KeyCode.L)) {
+ 			LoadGame();}
 	}
 
 	public void Clicked (){		
@@ -36,5 +42,14 @@ public class Click : MonoBehaviour {
 	public void CheatClick (){
 		onionsPerClick += 10000f; // debug cheat adding 100 onions/click
 		Debug.Log ("CheatClick");
+	}
+
+	public void SaveGame(){
+		PlayerPrefs.SetFloat ("onionsPerClick", onionsPerClick);
+		Debug.Log ("Save");
+	}
+	public void LoadGame(){			
+		onionsPerClick = PlayerPrefs.GetFloat ("onionsPerClick");
+		Debug.Log ("Load");
 	}
 }

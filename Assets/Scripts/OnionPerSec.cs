@@ -15,6 +15,11 @@ public class OnionPerSec : MonoBehaviour {
 
 	void Update (){
 		opsDisplay.text = GetOnionPerSec () + "\nOnions/Sec";
+
+		/*if (Input.GetKeyDown (KeyCode.S)) {
+			SaveGame();}
+		if (Input.GetKeyDown (KeyCode.L)) {
+			LoadGame();}*/
 	}
 
 	public float GetOnionPerSec(){
@@ -36,5 +41,10 @@ public class OnionPerSec : MonoBehaviour {
 		}
 	}
 
-
+	/*public void SaveGame(){
+		PlayerPrefs.SetFloat ("AutoOnionPerSec", AutoOnionPerSec);
+	}
+	public void LoadGame(){			
+		AutoOnionPerSec = PlayerPrefs.GetFloat ("AutoOnionPerSec");
+	}*/
 }

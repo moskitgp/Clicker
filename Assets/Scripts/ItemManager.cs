@@ -31,6 +31,14 @@ public class ItemManager : MonoBehaviour {
 		if (itemLevel >= 10) {
 			Unlock ();		
 		}
+
+		if (Input.GetKeyDown (KeyCode.S)) {
+			SaveGame();	}
+		if (Input.GetKeyDown (KeyCode.L)) {	
+			LoadGame();	}
+
+	//	Debug.Log (gameObject.name + ": " + PlayerPrefs.GetInt(name));
+
 	}
 
 	public void PurchasedItems(){
@@ -42,5 +50,15 @@ public class ItemManager : MonoBehaviour {
 			itemLevel += 1;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
 		}
+	}
+
+	public void SaveGame(){
+		PlayerPrefs.SetInt (name, itemLevel);
+		PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
+
+	}
+	public void LoadGame(){		
+		itemLevel = PlayerPrefs.GetInt (name);
+		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
 	}
 }
