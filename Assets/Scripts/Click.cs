@@ -17,7 +17,7 @@ public class Click : MonoBehaviour {
 
 	void Update(){
 		
-		onionDisplay.text = "Onions\n" + onionsCount.ToString("F0"); 
+		onionDisplay.text = "Space Onions\n" + onionsCount.ToString("F0"); 
 		OPC.text = onionsPerClick + "\nOnions/Click";
 
 		onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; 
