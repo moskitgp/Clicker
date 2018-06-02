@@ -31,15 +31,14 @@ public class PauseMenu : MonoBehaviour {
 	}
 	public void Resume(){
 		pauseMenuUI.SetActive (false);
-		Time.timeScale = 1f;
+		//Time.timeScale = 1f;
 		GameIsPaused = false;	
 		gameUI.transform.position = optionsResumePosition.transform.position;
 		Debug.Log ("Game Pause: " + GameIsPaused);
 	}
 	public void Pause(){
 		pauseMenuUI.SetActive (true);
-
-		Time.timeScale = 0f;
+		//Time.timeScale = 0f;
 		GameIsPaused = true;
 		gameUI.transform.position = optionsPausePosition.transform.position;
 		Debug.Log ("Game Pause: " + GameIsPaused);
@@ -49,6 +48,13 @@ public class PauseMenu : MonoBehaviour {
 	{
 		Time.timeScale = 1f;
 		SceneManager.LoadScene ("level0");
+	}
+
+	public void BackToMainMenu(){
+		//Time.timeScale = 1f;
+		GameIsPaused = false;	
+		Debug.Log ("Game Pause: " + GameIsPaused);
+		gameUI.transform.position = optionsPausePosition.transform.position;
 	}
 
 	public void QuitGame()

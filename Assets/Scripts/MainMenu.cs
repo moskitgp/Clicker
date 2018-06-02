@@ -5,10 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+	public GameObject gameUI;
+	public GameObject startMenu;
+	public GameObject optionsResumePosition;
+	public GameObject optionsPausePosition;
+
+
+	public void Awake (){
+		gameUI.SetActive (true);
+		gameUI.transform.position = optionsPausePosition.transform.position;
+	}
+
 	public void PlayGame()
 	{
 		Debug.Log ("Starting game");
-		SceneManager.LoadScene ("ClickerScene");
+		startMenu.SetActive (false);
+		gameUI.transform.position = optionsResumePosition.transform.position;
 	}
 
 	/*public void LoadSavedGame()
