@@ -11,6 +11,18 @@ public class SettingsMenu : MonoBehaviour {
 
 	Resolution[] resolutions;
 
+	public GameObject upgradeManager1;
+	public GameObject upgradeManager2;
+	public GameObject upgradeManager3;
+	public GameObject upgradeManager4;
+	public GameObject upgradeManager5;
+	public GameObject itemManager1;
+	public GameObject itemManager2;
+	public GameObject itemManager3;
+	public GameObject itemManager4;
+	public GameObject itemManager5;
+	public GameObject click;
+
 	void Start()
 	{
 		resolutions = Screen.resolutions;
@@ -58,5 +70,27 @@ public class SettingsMenu : MonoBehaviour {
 	{
 		Screen.fullScreen = isFullscreen;
 		Debug.Log ("Fullscreen: " + isFullscreen);
+	}
+
+	public void LoadGame (){
+		upgradeManager1.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager2.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager3.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager4.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager5.GetComponent<UpgradeManager> ().LoadGame ();
+
+		itemManager1.GetComponent<ItemManager> ().LoadGame ();
+		itemManager2.GetComponent<ItemManager> ().LoadGame ();
+		itemManager3.GetComponent<ItemManager> ().LoadGame ();
+		itemManager4.GetComponent<ItemManager> ().LoadGame ();
+		itemManager5.GetComponent<ItemManager> ().LoadGame ();
+
+		click.GetComponent<Click> ().LoadGame ();
+	}
+
+	public void ResetProgress(){
+		PlayerPrefs.DeleteAll ();
+		Debug.Log ("Progress has been erased.");
+		LoadGame ();
 	}
 }

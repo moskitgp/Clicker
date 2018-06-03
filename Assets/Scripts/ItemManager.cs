@@ -94,14 +94,14 @@ public class ItemManager : MonoBehaviour {
 	public void SaveGame(){
 		PlayerPrefs.SetInt (name + "_level", itemLevel);
 		PlayerPrefs.SetInt(name + "_count", count);
-		//PlayerPrefs.SetFloat(name + "_cost", cost);
+		PlayerPrefs.SetFloat(name + "_cost", cost);
 
 		PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
 	}
 	public void LoadGame(){        
 		itemLevel = PlayerPrefs.GetInt (name + "_level");
 		count = PlayerPrefs.GetInt(name + "_count");
-		//cost = PlayerPrefs.GetFloat(name + "_cost");
+		cost = PlayerPrefs.GetFloat(name + "_cost");
 
 		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
 	}

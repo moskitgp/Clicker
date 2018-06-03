@@ -77,7 +77,8 @@ public class UpgradeManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.L)) {
 			LoadGame();	}						// loading game progress with 'L' key
 		if (Input.GetKeyDown (KeyCode.X)) {
-			PlayerPrefs.DeleteAll(); }			// deleting game progress with 'X' key
+			PlayerPrefs.DeleteAll(); 
+			Debug.Log ("Progress has been erased."); }			// deleting game progress with 'X' key
 
 
 		//Debug.Log (gameObject.name + ": " + PlayerPrefs.GetInt(name));
@@ -98,14 +99,14 @@ public class UpgradeManager : MonoBehaviour {
 	public void SaveGame(){
 		PlayerPrefs.SetInt (name + "_level", upgradeLevel);
 		PlayerPrefs.SetInt (name + "_count", count);
-		//PlayerPrefs.SetFloat (name + "_cost", cost);
+		PlayerPrefs.SetFloat (name + "_cost", cost);
 
 		PlayerPrefs.SetFloat ("onionsSpendOnUpgrades", onionsSpendOnUpgrades);
 	}
 	public void LoadGame(){		
 		upgradeLevel = PlayerPrefs.GetInt (name + "_level");
 		count = PlayerPrefs.GetInt (name + "_count");
-		//cost = PlayerPrefs.GetInt (name + "_cost");
+		cost = PlayerPrefs.GetFloat (name + "_cost");
 
 		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
 	}
