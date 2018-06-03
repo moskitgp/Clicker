@@ -34,26 +34,26 @@ public class PauseMenu : MonoBehaviour {
 		//Time.timeScale = 1f;
 		GameIsPaused = false;	
 		gameUI.transform.position = optionsResumePosition.transform.position;
-		Debug.Log ("Game Pause: " + GameIsPaused);
+		Debug.Log ("Game Pause: " + GameIsPaused + "\nGame resumed.");
 	}
 	public void Pause(){
 		pauseMenuUI.SetActive (true);
 		//Time.timeScale = 0f;
 		GameIsPaused = true;
 		gameUI.transform.position = optionsPausePosition.transform.position;
-		Debug.Log ("Game Pause: " + GameIsPaused);
+		Debug.Log ("Game Pause: " + GameIsPaused + "\nGame paused.");
 	}
 
-	public void LoadMenu()
+	/*public void LoadMenu()
 	{
 		Time.timeScale = 1f;
 		SceneManager.LoadScene ("level0");
-	}
+	}*/
 
 	public void BackToMainMenu(){
 		//Time.timeScale = 1f;
 		GameIsPaused = false;	
-		Debug.Log ("Game Pause: " + GameIsPaused);
+		Debug.Log ("Game Pause: " + GameIsPaused + "\nGoing back to Main Menu");
 		gameUI.transform.position = optionsPausePosition.transform.position;
 	}
 

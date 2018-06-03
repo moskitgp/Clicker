@@ -13,24 +13,62 @@ public class ItemManager : MonoBehaviour {
 	public string itemName;
 	public GameObject itemB;
 	public int itemLevel = 0;
-	private float baseCost;
 	public static float onionsSpendOnItems = 0f;
 
+	private float baseCost;
+	private Transform text;
+	public Text costText;
+	private float costK;
+	private float costM;
+	private float costB;
+	private float costT;
 
 
 	void Start(){
 		baseCost = cost;
+		text = itemB.transform.Find ("Text");
 	}
 
 	public void Unlock() {
-		itemB.SetActive (true);
+		//itemB.SetActive (true);     // old system of unlocking, very buggy
+		itemB.GetComponent<Image>().enabled = true;
+		itemB.GetComponent<Button>().enabled = true;
+		text.gameObject.GetComponent<Text> ().enabled = true;
 	}
 
 	void Update (){
-		itemInfo.text = itemName + "\nLevel: " + itemLevel + "\nCost: " + cost + "\nOnions: " + tickValue + "/s";
+
+		if (cost < 1000f) {
+			costText.text = cost.ToString ();
+		}
+		if (cost >= 1000f && cost < 1000000f) {
+			costK = cost/1000f;
+			costText.text = costK.ToString ("f2") + "K";
+		}
+		if (cost >= 1000000f && cost < 1000000000f) {
+			costM = cost/1000000f;
+			costText.text = costM.ToString ("f2") + "M";
+		}
+		if (cost >= 1000000000f && cost < 1000000000000f) {
+			costB = cost/1000000000f;
+			costText.text = costB.ToString ("f2") + "B";
+		}
+		if (cost >= 1000000000000f) {
+			costT = cost/1000000000000f;
+			costText.text = costT.ToString ("f2") + "T";
+		}
+
+		itemInfo.text = itemName + "\nLevel: " + itemLevel + "\nCost: " + costText.text + "\nOnions: " + tickValue + "/s";
 
 		if (itemLevel >= 10) {
 			Unlock ();		
+		}
+
+		if (itemLevel < 10) {
+			//itemB.SetActive (false);	     // old system of unlocking, very buggy
+			itemB.GetComponent<Image>().enabled = false;
+			itemB.GetComponent<Button>().enabled = false;
+			text.gameObject.GetComponent<Text> ().enabled = false;
 		}
 
 		if (Input.GetKeyDown (KeyCode.S)) {

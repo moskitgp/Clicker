@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour {
 	public void Awake (){
 		gameUI.SetActive (true);
 		gameUI.transform.position = optionsPausePosition.transform.position;
+		Debug.Log ("The game has started");
 	}
 
 	public void PlayGame()
