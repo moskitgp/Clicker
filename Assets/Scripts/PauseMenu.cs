@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject pauseMenuUI;
 	public GameObject optionsMenuUI;
 	public GameObject gameUI;
+	public GameObject mainMenu;
+	public GameObject creditsMenu;
 
 	public GameObject optionsPausePosition;
 	public GameObject optionsResumePosition;
@@ -19,13 +21,13 @@ public class PauseMenu : MonoBehaviour {
 	
 	void Update () 
 	{
-		if (Input.GetKeyDown (KeyCode.Escape)) 
+		if (Input.GetKeyDown (KeyCode.Escape) && !mainMenu.activeInHierarchy && !creditsMenu.activeInHierarchy && !optionsMenuUI.activeInHierarchy) 
 		{			
 			if (GameIsPaused) 
 			{
 				Resume ();
 			}else{
-				Pause ();
+				Pause ();			
 			}
 		}
 	}
@@ -36,7 +38,7 @@ public class PauseMenu : MonoBehaviour {
 		gameUI.transform.position = optionsResumePosition.transform.position;
 		Debug.Log ("Game Pause: " + GameIsPaused + "\nGame resumed.");
 	}
-	public void Pause(){
+	public void Pause(){		
 		pauseMenuUI.SetActive (true);
 		//Time.timeScale = 0f;
 		GameIsPaused = true;
