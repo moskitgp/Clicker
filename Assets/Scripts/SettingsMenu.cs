@@ -143,8 +143,6 @@ public class SettingsMenu : MonoBehaviour {
 
 		backgroundStars.GetComponent<AcceleratingStars> ().DefaultStarsSpeed ();
 
-
-
 		Debug.Log ("Progress has been erased.");
 	}
 }
