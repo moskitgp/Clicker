@@ -24,9 +24,14 @@ public class ItemManager : MonoBehaviour {
 	private float costT;
 
 
+
 	void Start(){
 		baseCost = cost;
 		text = itemB.transform.Find ("Text");
+
+		PlayerPrefs.SetInt (name + "_defaultlevel", itemLevel);
+		PlayerPrefs.SetInt(name + "_defaultcount", count);
+		PlayerPrefs.SetFloat(name + "_defaultcost", cost);
 	}
 
 	public void Unlock() {
@@ -76,6 +81,10 @@ public class ItemManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.L)) {	
 			LoadGame();	}
 
+		if (cost == 0) {
+			DefaultItemManagerLevel();
+		}
+
 	//	Debug.Log (gameObject.name + ": " + PlayerPrefs.GetInt(name));
 
 	}
@@ -105,4 +114,11 @@ public class ItemManager : MonoBehaviour {
 
 		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
 	}
+
+	public void DefaultItemManagerLevel(){
+		itemLevel = PlayerPrefs.GetInt (name + "_defaultlevel");
+		count = PlayerPrefs.GetInt(name + "_defaultcount");
+		cost = PlayerPrefs.GetFloat(name + "_defaultcost");
+	}
+		
 }

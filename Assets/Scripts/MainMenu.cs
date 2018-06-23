@@ -10,11 +10,20 @@ public class MainMenu : MonoBehaviour {
 	public GameObject optionsResumePosition;
 	public GameObject optionsPausePosition;
 
+	public GameObject optionsMenuUI;
+	public GameObject mainMenu;
+	public GameObject creditsMenu;
+
 
 	public void Awake (){
 		gameUI.SetActive (true);
 		gameUI.transform.position = optionsPausePosition.transform.position;
-		Debug.Log ("The game has started");
+
+		mainMenu.SetActive (true);
+		optionsMenuUI.SetActive (false);
+		creditsMenu.SetActive (false);
+
+		Debug.Log ("Initial boot. The game has started");
 	}
 
 	public void PlayGame()

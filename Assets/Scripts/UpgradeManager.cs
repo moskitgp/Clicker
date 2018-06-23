@@ -30,6 +30,10 @@ public class UpgradeManager : MonoBehaviour {
 	void Start(){
 		baseCost = cost;
 		text = itemB.transform.Find ("Text");
+
+		PlayerPrefs.SetInt (name + "_defaultlevel", upgradeLevel);
+		PlayerPrefs.SetInt (name + "_defaultcount", count);
+		PlayerPrefs.SetFloat (name + "_defaultcost", cost);
 	}
 
 	public void Unlock() {
@@ -80,6 +84,9 @@ public class UpgradeManager : MonoBehaviour {
 			PlayerPrefs.DeleteAll(); 
 			Debug.Log ("Progress has been erased."); }			// deleting game progress with 'X' key
 
+		if (cost == 0) {
+			DefaultUpgradeManagerLevel();
+		}
 
 		//Debug.Log (gameObject.name + ": " + PlayerPrefs.GetInt(name));
 	}
@@ -109,5 +116,11 @@ public class UpgradeManager : MonoBehaviour {
 		cost = PlayerPrefs.GetFloat (name + "_cost");
 
 		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
+	}
+
+	public void DefaultUpgradeManagerLevel(){
+		upgradeLevel = PlayerPrefs.GetInt (name + "_defaultlevel");
+		count = PlayerPrefs.GetInt (name + "_defaultcount");
+		cost = PlayerPrefs.GetFloat (name + "_defaultcost");
 	}
 }

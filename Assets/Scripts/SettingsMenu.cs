@@ -89,8 +89,18 @@ public class SettingsMenu : MonoBehaviour {
 	}
 
 	public void ResetProgress(){
-		PlayerPrefs.DeleteAll ();
+		//PlayerPrefs.DeleteAll ();
+		upgradeManager1.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
+		upgradeManager2.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
+		upgradeManager3.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
+		upgradeManager4.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
+		upgradeManager5.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
+
+		itemManager1.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
+		itemManager2.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
+		itemManager3.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
+		itemManager4.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
+		itemManager5.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
 		Debug.Log ("Progress has been erased.");
-		LoadGame ();
 	}
 }
