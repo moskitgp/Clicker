@@ -8,7 +8,7 @@ public class Highscores : MonoBehaviour {
 	const string publicCode = "5aaea520012b2e1068a10cb2";
 	const string webURL = "http://dreamlo.com/lb/";
 
-	public Highscore [] highscoresList;
+	/*public Highscore [] highscoresList;
 
 	void Awake (){
 		AddNewHighscore ("Michal", 50);
@@ -73,5 +73,5 @@ public struct Highscore{
 	public Highscore(string _username, int _score){
 		username = _username;
 		score = _score;
-	}
+	}*/
 }

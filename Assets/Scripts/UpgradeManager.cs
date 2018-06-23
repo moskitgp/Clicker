@@ -34,6 +34,8 @@ public class UpgradeManager : MonoBehaviour {
 		PlayerPrefs.SetInt (name + "_defaultlevel", upgradeLevel);
 		PlayerPrefs.SetInt (name + "_defaultcount", count);
 		PlayerPrefs.SetFloat (name + "_defaultcost", cost);
+		PlayerPrefs.SetFloat ("defaultonionsSpendOnUpgrades", onionsSpendOnUpgrades);
+
 	}
 
 	public void Unlock() {
@@ -67,7 +69,7 @@ public class UpgradeManager : MonoBehaviour {
 
 
 		if (upgradeLevel >= 10) {
-			Unlock ();		
+			Unlock ();
 		}
 		if (upgradeLevel < 10) {
 			//itemB.SetActive (false);	     // old system of unlocking, very buggy
@@ -100,6 +102,9 @@ public class UpgradeManager : MonoBehaviour {
 			upgradeLevel += 1;
 			click.onionsPerClick += clickMultiplier;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
+			if (upgradeLevel == 10) {
+				AcceleratingStars.AccelerateStars();				
+			}
 		}
 	}
 
@@ -122,5 +127,9 @@ public class UpgradeManager : MonoBehaviour {
 		upgradeLevel = PlayerPrefs.GetInt (name + "_defaultlevel");
 		count = PlayerPrefs.GetInt (name + "_defaultcount");
 		cost = PlayerPrefs.GetFloat (name + "_defaultcost");
+
+		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("defaultonionsSpendOnUpgrades");
 	}
+
+
 }

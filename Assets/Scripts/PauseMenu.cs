@@ -14,10 +14,6 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject optionsPausePosition;
 	public GameObject optionsResumePosition;
-
-	void Start(){
-		
-	}
 	
 	void Update () 
 	{

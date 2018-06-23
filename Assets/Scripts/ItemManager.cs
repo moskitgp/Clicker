@@ -32,6 +32,7 @@ public class ItemManager : MonoBehaviour {
 		PlayerPrefs.SetInt (name + "_defaultlevel", itemLevel);
 		PlayerPrefs.SetInt(name + "_defaultcount", count);
 		PlayerPrefs.SetFloat(name + "_defaultcost", cost);
+		PlayerPrefs.SetFloat ("defaultonionsSpendOnItems", onionsSpendOnItems);
 	}
 
 	public void Unlock() {
@@ -97,6 +98,10 @@ public class ItemManager : MonoBehaviour {
 			count += 1;
 			itemLevel += 1;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
+
+			if (itemLevel == 10) {
+				AcceleratingStars.AccelerateStars();				
+			}
 		}
 	}
 
@@ -111,7 +116,6 @@ public class ItemManager : MonoBehaviour {
 		itemLevel = PlayerPrefs.GetInt (name + "_level");
 		count = PlayerPrefs.GetInt(name + "_count");
 		cost = PlayerPrefs.GetFloat(name + "_cost");
-
 		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
 	}
 
@@ -119,6 +123,7 @@ public class ItemManager : MonoBehaviour {
 		itemLevel = PlayerPrefs.GetInt (name + "_defaultlevel");
 		count = PlayerPrefs.GetInt(name + "_defaultcount");
 		cost = PlayerPrefs.GetFloat(name + "_defaultcost");
+		onionsSpendOnItems = PlayerPrefs.GetFloat ("defaultonionsSpendOnItems");
 	}
 		
 }

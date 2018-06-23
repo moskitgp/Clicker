@@ -22,6 +22,7 @@ public class SettingsMenu : MonoBehaviour {
 	public GameObject itemManager4;
 	public GameObject itemManager5;
 	public GameObject click;
+	public GameObject backgroundStars;
 
 	void Start()
 	{
@@ -86,10 +87,48 @@ public class SettingsMenu : MonoBehaviour {
 		itemManager5.GetComponent<ItemManager> ().LoadGame ();
 
 		click.GetComponent<Click> ().LoadGame ();
+
+		backgroundStars.GetComponent<AcceleratingStars> ().LoadGame ();
 	}
 
 	public void ResetProgress(){
 		//PlayerPrefs.DeleteAll ();
+
+		PlayerPrefs.DeleteKey ("Upgrade1_level");		
+		PlayerPrefs.DeleteKey ("Upgrade2_level");		
+		PlayerPrefs.DeleteKey ("Upgrade3_level");		
+		PlayerPrefs.DeleteKey ("Upgrade4_level");		
+		PlayerPrefs.DeleteKey ("Upgrade5_level");
+		PlayerPrefs.DeleteKey ("Upgrade1_count");		
+		PlayerPrefs.DeleteKey ("Upgrade2_count");		
+		PlayerPrefs.DeleteKey ("Upgrade3_count");		
+		PlayerPrefs.DeleteKey ("Upgrade4_count");		
+		PlayerPrefs.DeleteKey ("Upgrade5_count");
+		PlayerPrefs.DeleteKey ("Upgrade1_cost");		
+		PlayerPrefs.DeleteKey ("Upgrade2_cost");		
+		PlayerPrefs.DeleteKey ("Upgrade3_cost");		
+		PlayerPrefs.DeleteKey ("Upgrade4_cost");		
+		PlayerPrefs.DeleteKey ("Upgrade5_cost");
+		PlayerPrefs.DeleteKey ("Worker1_level");		
+		PlayerPrefs.DeleteKey ("Worker2_level");		
+		PlayerPrefs.DeleteKey ("Worker3_level");		
+		PlayerPrefs.DeleteKey ("Worker4_level");		
+		PlayerPrefs.DeleteKey ("Worker5_level");
+		PlayerPrefs.DeleteKey ("Worker1_count");		
+		PlayerPrefs.DeleteKey ("Worker2_count");		
+		PlayerPrefs.DeleteKey ("Worker3_count");		
+		PlayerPrefs.DeleteKey ("Worker4_count");		
+		PlayerPrefs.DeleteKey ("Worker5_count");
+		PlayerPrefs.DeleteKey ("Worker1_cost");		
+		PlayerPrefs.DeleteKey ("Worker2_cost");		
+		PlayerPrefs.DeleteKey ("Worker3_cost");		
+		PlayerPrefs.DeleteKey ("Worker4_cost");		
+		PlayerPrefs.DeleteKey ("Worker5_cost");
+		PlayerPrefs.DeleteKey ("onionsPerClick");
+		PlayerPrefs.DeleteKey ("onionsCount");
+		PlayerPrefs.DeleteKey ("BackgroundStars_mainSlow");
+		PlayerPrefs.DeleteKey ("BackgroundStars_mainFast");
+
 		upgradeManager1.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
 		upgradeManager2.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
 		upgradeManager3.GetComponent<UpgradeManager> ().DefaultUpgradeManagerLevel ();
@@ -101,6 +140,11 @@ public class SettingsMenu : MonoBehaviour {
 		itemManager3.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
 		itemManager4.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
 		itemManager5.GetComponent<ItemManager> ().DefaultItemManagerLevel ();
+
+		backgroundStars.GetComponent<AcceleratingStars> ().DefaultStarsSpeed ();
+
+
+
 		Debug.Log ("Progress has been erased.");
 	}
 }

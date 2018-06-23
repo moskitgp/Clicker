@@ -27,11 +27,12 @@ public class Click : MonoBehaviour {
 	private float onionsCountT;
 
 	void Start(){
+		PlayerPrefs.SetFloat ("defaultonionsPerClick", onionsPerClick);
+		PlayerPrefs.SetFloat ("defaultonionsCount", onionsCount);
+
 	}
 
-	void Update(){
-		
-
+	void Update(){		
 		onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; 
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,23 +77,23 @@ public class Click : MonoBehaviour {
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 		if (onionsSpendInTotal < 1000f) {
-			onionsSpendInTotalText.text = onionsSpendInTotal.ToString () + "\nOnions Spent";
+			onionsSpendInTotalText.text = onionsSpendInTotal.ToString () + "\nOnions ";
 		}
 		if (onionsSpendInTotal >= 1000f && onionsSpendInTotal < 1000000f) {
 			onionsSpendInTotalK = onionsSpendInTotal/1000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalK.ToString ("f2") + "K" + "\nOnions Spent";
+			onionsSpendInTotalText.text = onionsSpendInTotalK.ToString ("f2") + "K" + "\nOnions ";
 		}
 		if (onionsSpendInTotal >= 1000000f && onionsSpendInTotal < 1000000000f) {
 			onionsSpendInTotalM = onionsSpendInTotal/1000000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalM.ToString ("f2") + "M" + "\nOnions Spent";
+			onionsSpendInTotalText.text = onionsSpendInTotalM.ToString ("f2") + "M" + "\nOnions ";
 		}
 		if (onionsSpendInTotal >= 1000000000f && onionsSpendInTotal < 1000000000000f) {
 			onionsSpendInTotalB = onionsSpendInTotal/1000000000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalB.ToString ("f2") + "B" + "\nOnions Spent";
+			onionsSpendInTotalText.text = onionsSpendInTotalB.ToString ("f2") + "B" + "\nOnions ";
 		}
 		if (onionsSpendInTotal >= 1000000000000f) {
 			onionsSpendInTotalT = onionsSpendInTotal/1000000000000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalT.ToString ("f2") + "T" + "\nOnions Spent";
+			onionsSpendInTotalText.text = onionsSpendInTotalT.ToString ("f2") + "T" + "\nOnions ";
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -130,5 +131,10 @@ public class Click : MonoBehaviour {
 		if (onionsPerClick == 0) {
 			onionsPerClick = 1;
 		}
+	}
+
+	public void DefaultClickLevel(){
+		onionsPerClick = PlayerPrefs.GetFloat ("defaultonionsPerClick");
+		onionsCount = PlayerPrefs.GetFloat ("defaultonionsCount");
 	}
 }
