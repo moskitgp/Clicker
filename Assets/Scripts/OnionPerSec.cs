@@ -14,7 +14,7 @@ public class OnionPerSec : MonoBehaviour {
 	}
 
 	void Update (){
-		opsDisplay.text = GetOnionPerSec () + "\nOnions/Sec";
+		opsDisplay.text = "Onions/Sec\n" + GetOnionPerSec ();
 	}
 
 	public float GetOnionPerSec(){
@@ -26,13 +26,13 @@ public class OnionPerSec : MonoBehaviour {
 	}
 
 	public void AutoOnionPerSec (){
-		click.onionsCount += GetOnionPerSec () /60;
+		click.onionsCount += GetOnionPerSec () /5;
 	}
 
 	IEnumerator AutoTick(){
 		while (true) {
 			AutoOnionPerSec ();
-			yield return new WaitForSeconds (1f/60);
+			yield return new WaitForSeconds (1f/5);
 		}
 	}
 }

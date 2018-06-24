@@ -57,43 +57,43 @@ public class Click : MonoBehaviour {
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 		if (onionsPerClick < 1000f) {
-			OPC.text = onionsPerClick.ToString () + "\nOnions/Click";
+			OPC.text = "Onions/Click\n" + onionsPerClick.ToString ();
 		}
 		if (onionsPerClick >= 1000f && onionsPerClick < 1000000f) {
 			onionsPerClickK = onionsPerClick/1000f;
-			OPC.text = onionsPerClickK.ToString ("f2") + "K" + "\nOnions/Click";
+			OPC.text = "Onions/Click\n" + onionsPerClickK.ToString ("f2") + "K";
 		}
 		if (onionsPerClick >= 1000000f && onionsPerClick < 1000000000f) {
 			onionsPerClickM = onionsPerClick/1000000f;
-			OPC.text = onionsPerClickM.ToString ("f2") + "M" + "\nOnions/Click";
+			OPC.text = "Onions/Click\n" + onionsPerClickM.ToString ("f2") + "M";
 		}
 		if (onionsPerClick >= 1000000000f && onionsPerClick < 1000000000000f) {
 			onionsPerClickB = onionsPerClick/1000000000f;
-			OPC.text = onionsPerClickB.ToString ("f2") + "B" + "\nOnions/Click";
+			OPC.text = "Onions/Click\n" + onionsPerClickB.ToString ("f2") + "B";
 		}
 		if (onionsPerClick >= 1000000000000f) {
 			onionsPerClickT = onionsPerClick/1000000000000f;
-			OPC.text = onionsPerClickT.ToString ("f2") + "T" + "\nOnions/Click";
+			OPC.text = "Onions/Click\n" + onionsPerClickT.ToString ("f2") + "T";
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 		if (onionsSpendInTotal < 1000f) {
-			onionsSpendInTotalText.text = onionsSpendInTotal.ToString () + "\nOnions ";
+			onionsSpendInTotalText.text = "Onions Spent\n" + onionsSpendInTotal.ToString ();
 		}
 		if (onionsSpendInTotal >= 1000f && onionsSpendInTotal < 1000000f) {
 			onionsSpendInTotalK = onionsSpendInTotal/1000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalK.ToString ("f2") + "K" + "\nOnions ";
+			onionsSpendInTotalText.text =  "Onions Spent\n" + onionsSpendInTotalK.ToString ("f2") + "K";
 		}
 		if (onionsSpendInTotal >= 1000000f && onionsSpendInTotal < 1000000000f) {
 			onionsSpendInTotalM = onionsSpendInTotal/1000000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalM.ToString ("f2") + "M" + "\nOnions ";
+			onionsSpendInTotalText.text = "Onions Spent\n" + onionsSpendInTotalM.ToString ("f2") + "M";
 		}
 		if (onionsSpendInTotal >= 1000000000f && onionsSpendInTotal < 1000000000000f) {
 			onionsSpendInTotalB = onionsSpendInTotal/1000000000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalB.ToString ("f2") + "B" + "\nOnions ";
+			onionsSpendInTotalText.text = "Onions Spent\n" + onionsSpendInTotalB.ToString ("f2") + "B";
 		}
 		if (onionsSpendInTotal >= 1000000000000f) {
 			onionsSpendInTotalT = onionsSpendInTotal/1000000000000f;
-			onionsSpendInTotalText.text = onionsSpendInTotalT.ToString ("f2") + "T" + "\nOnions ";
+			onionsSpendInTotalText.text = "Onions Spent\n" + onionsSpendInTotalT.ToString ("f2") + "T";
 		}
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -115,7 +115,7 @@ public class Click : MonoBehaviour {
 	}
 
 	public void CheatClick (){
-		onionsPerClick += 1000000000f; // debug cheat adding 100 onions/click
+		onionsPerClick += 1000000f; // debug cheat adding 100 onions/click
 		Debug.Log ("CheatClick");
 	}
 
