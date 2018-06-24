@@ -20,6 +20,25 @@ public class SaveManager : MonoBehaviour {
 	public GameObject backgroundStars;
 
 
+	void Start()
+	{
+		StartCoroutine(autoSave());
+	}
+
+	IEnumerator autoSave()
+	{
+		while(true) { //variable that enables you to kill routine
+			yield return new WaitForSeconds(60);
+			SaveGame ();
+			Debug.Log ("Autosave feature");
+		}
+	}
+
+
+
+
+
+
 	public void SaveGame (){
 		upgradeManager1.GetComponent<UpgradeManager> ().SaveGame ();
 		upgradeManager2.GetComponent<UpgradeManager> ().SaveGame ();
