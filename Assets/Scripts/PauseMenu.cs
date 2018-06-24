@@ -11,13 +11,14 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject gameUI;
 	public GameObject mainMenu;
 	public GameObject creditsMenu;
+	public GameObject optionsMainMenu;
 
 	public GameObject optionsPausePosition;
 	public GameObject optionsResumePosition;
 	
 	void Update () 
 	{
-		if (Input.GetKeyDown (KeyCode.Escape) && !mainMenu.activeInHierarchy && !creditsMenu.activeInHierarchy && !optionsMenuUI.activeInHierarchy) 
+		if (Input.GetKeyDown (KeyCode.Escape) && !mainMenu.activeInHierarchy && !creditsMenu.activeInHierarchy && !optionsMenuUI.activeInHierarchy && !optionsMainMenu.activeInHierarchy) 
 		{			
 			if (GameIsPaused) 
 			{

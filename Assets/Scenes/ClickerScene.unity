@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LOW
+  m_Text: Very Low
 --- !u!222 &4466217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2318,6 +2318,7 @@ MonoBehaviour:
   mainMenu: {fileID: 1632645221}
   creditsMenu: {fileID: 998405101}
   pauseMenu: {fileID: 406438614}
+  backgroundStars: {fileID: 138101546}
 --- !u!1 &254332501
 GameObject:
   m_ObjectHideFlags: 0
@@ -8468,6 +8469,7 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   creditsMenu: {fileID: 0}
   pauseMenu: {fileID: 0}
+  backgroundStars: {fileID: 0}
 --- !u!224 &671543251
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20902,6 +20904,7 @@ MonoBehaviour:
   gameUI: {fileID: 1713462049}
   mainMenu: {fileID: 1632645221}
   creditsMenu: {fileID: 998405101}
+  optionsMainMenu: {fileID: 696763076}
   optionsPausePosition: {fileID: 532941977}
   optionsResumePosition: {fileID: 1477520077}
 --- !u!1 &1831207841

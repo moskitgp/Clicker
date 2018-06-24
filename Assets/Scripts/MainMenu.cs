@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject mainMenu;
 	public GameObject creditsMenu;
 	public GameObject pauseMenu;
+	public GameObject backgroundStars;
 
 
 	public void Start (){
@@ -21,6 +22,8 @@ public class MainMenu : MonoBehaviour {
 		gameUI.transform.position = optionsPausePosition.transform.position;
 
 		mainMenu.SetActive (true);
+		backgroundStars.SetActive (true);
+
 		optionsMenuUI.SetActive (false);
 		creditsMenu.SetActive (false);
 		pauseMenu.SetActive (false);
