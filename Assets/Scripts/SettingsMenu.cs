@@ -46,6 +46,8 @@ public class SettingsMenu : MonoBehaviour {
 		resolutionDropdown.AddOptions (options);
 		resolutionDropdown.value = currentResolutionIndex;
 		resolutionDropdown.RefreshShownValue ();
+
+		QualitySettings.SetQualityLevel (5,true);
 	}
 
 	public void SetResolution (int resolutionIndex)
