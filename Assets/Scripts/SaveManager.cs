@@ -34,11 +34,6 @@ public class SaveManager : MonoBehaviour {
 		}
 	}
 
-
-
-
-
-
 	public void SaveGame (){
 		upgradeManager1.GetComponent<UpgradeManager> ().SaveGame ();
 		upgradeManager2.GetComponent<UpgradeManager> ().SaveGame ();
