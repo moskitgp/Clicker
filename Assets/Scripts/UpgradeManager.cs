@@ -42,7 +42,9 @@ public class UpgradeManager : MonoBehaviour {
 		//itemB.SetActive (true);     // old system of unlocking, very buggy
 		itemB.GetComponent<Image>().enabled = true;
 		itemB.GetComponent<Button>().enabled = true;
-		text.gameObject.GetComponent<Text> ().enabled = true;	}
+		text.gameObject.GetComponent<Text> ().enabled = true;
+		Debug.Log (itemB.name + " was unlocked");
+	}
 
 	void Update(){
 		if (cost < 1000f) {

@@ -4,11 +4,5 @@ using UnityEngine;
 
 public class DisplayHighscores : MonoBehaviour {
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
+
 }
