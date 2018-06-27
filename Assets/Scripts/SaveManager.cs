@@ -19,18 +19,26 @@ public class SaveManager : MonoBehaviour {
 	public GameObject click;
 	public GameObject backgroundStars;
 
+	private bool autosaveFeature;
 
 	void Start()
 	{
 		StartCoroutine(autoSave());
 	}
 
+	public void SetAutosave(){
+		autosaveFeature = !autosaveFeature;
+		Debug.Log ("Autosave set to: " + autosaveFeature);
+	}
+
 	IEnumerator autoSave()
 	{
-		while(true) { //variable that enables you to kill routine
-			yield return new WaitForSeconds(60);
-			SaveGame ();
-			Debug.Log ("Autosave feature");
+		while(true) { 
+			yield return new WaitForSeconds(100);
+			if(autosaveFeature){
+				SaveGame ();
+				Debug.Log ("Autosave feature completed");
+			}
 		}
 	}
 

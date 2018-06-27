@@ -18,9 +18,7 @@ public class MainMenu : MonoBehaviour {
 
 
 	public void Start (){
-		gameUI.SetActive (true);
-		gameUI.transform.position = optionsPausePosition.transform.position;
-
+		gameUI.SetActive (true); gameUI.transform.position = optionsPausePosition.transform.position;
 		mainMenu.SetActive (true);
 		backgroundStars.SetActive (true);
 
