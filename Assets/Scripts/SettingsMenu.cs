@@ -23,9 +23,11 @@ public class SettingsMenu : MonoBehaviour {
 	public GameObject itemManager5;
 	public GameObject click;
 	public GameObject backgroundStars;
+	public bool vsyncToggle = true;
 
 	void Start()
 	{
+		SetVsync ();
 		resolutions = Screen.resolutions;
 		resolutionDropdown.ClearOptions ();
 
@@ -73,6 +75,20 @@ public class SettingsMenu : MonoBehaviour {
 	{
 		Screen.fullScreen = isFullscreen;
 		Debug.Log ("Fullscreen: " + isFullscreen);
+	}
+
+	public void VsyncToggle (){
+		vsyncToggle = !vsyncToggle;
+		SetVsync ();
+		Debug.Log ("VSYNC is set to: " + !vsyncToggle);
+	}
+
+	public void SetVsync (){
+		if (!vsyncToggle) {
+			QualitySettings.vSyncCount = 1;
+		} if (vsyncToggle) {
+			QualitySettings.vSyncCount = 0;
+		}
 	}
 
 	public void LoadGame (){
