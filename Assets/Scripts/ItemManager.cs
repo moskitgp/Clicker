@@ -17,6 +17,8 @@ public class ItemManager : MonoBehaviour {
 
 	private float baseCost;
 	private Transform text;
+	private Transform image;
+
 	public Text costText;
 	private float costK;
 	private float costM;
@@ -28,6 +30,7 @@ public class ItemManager : MonoBehaviour {
 	void Start(){
 		baseCost = cost;
 		text = itemB.transform.Find ("Text");
+		image = itemB.transform.Find ("Image");
 
 		PlayerPrefs.SetInt (name + "_defaultlevel", itemLevel);
 		PlayerPrefs.SetInt(name + "_defaultcount", count);
@@ -40,6 +43,7 @@ public class ItemManager : MonoBehaviour {
 		itemB.GetComponent<Image>().enabled = true;
 		itemB.GetComponent<Button>().enabled = true;
 		text.gameObject.GetComponent<Text> ().enabled = true;
+		image.gameObject.GetComponent<Image> ().enabled = true;
 	}
 
 	void Update (){
@@ -75,6 +79,7 @@ public class ItemManager : MonoBehaviour {
 			itemB.GetComponent<Image>().enabled = false;
 			itemB.GetComponent<Button>().enabled = false;
 			text.gameObject.GetComponent<Text> ().enabled = false;
+			image.gameObject.GetComponent<Image> ().enabled = false;
 		}
 
 		if (Input.GetKeyDown (KeyCode.S)) {
@@ -99,8 +104,11 @@ public class ItemManager : MonoBehaviour {
 			itemLevel += 1;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
 
+			Debug.Log (name + " upgraded to level " + itemLevel);
+
 			if (itemLevel == 10) {
-				AcceleratingStars.AccelerateStars();				
+				AcceleratingStars.AccelerateStars();		
+				Debug.Log (itemB.name + " was unlocked");
 			}
 		}
 	}
@@ -124,6 +132,5 @@ public class ItemManager : MonoBehaviour {
 		count = PlayerPrefs.GetInt(name + "_defaultcount");
 		cost = PlayerPrefs.GetFloat(name + "_defaultcost");
 		onionsSpendOnItems = PlayerPrefs.GetFloat ("defaultonionsSpendOnItems");
-	}
-		
+	}		
 }

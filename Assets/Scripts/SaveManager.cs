@@ -60,5 +60,23 @@ public class SaveManager : MonoBehaviour {
 		backgroundStars.GetComponent<AcceleratingStars> ().SaveGame ();
 	}
 
+	public void LoadGame (){
+		upgradeManager1.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager2.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager3.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager4.GetComponent<UpgradeManager> ().LoadGame ();
+		upgradeManager5.GetComponent<UpgradeManager> ().LoadGame ();
+
+		itemManager1.GetComponent<ItemManager> ().LoadGame ();
+		itemManager2.GetComponent<ItemManager> ().LoadGame ();
+		itemManager3.GetComponent<ItemManager> ().LoadGame ();
+		itemManager4.GetComponent<ItemManager> ().LoadGame ();
+		itemManager5.GetComponent<ItemManager> ().LoadGame ();
+
+		click.GetComponent<Click> ().LoadGame ();
+
+		backgroundStars.GetComponent<AcceleratingStars> ().LoadGame ();
+	}
+
 
 }

@@ -18,6 +18,7 @@ public class UpgradeManager : MonoBehaviour {
 	private float _newCost;
 	private float baseCost;
 	private Transform text;
+	private Transform image;
 	public Text costText;
 	private float costK;
 	private float costM;
@@ -30,12 +31,12 @@ public class UpgradeManager : MonoBehaviour {
 	void Start(){
 		baseCost = cost;
 		text = itemB.transform.Find ("Text");
+		image = itemB.transform.Find ("Image");
 
 		PlayerPrefs.SetInt (name + "_defaultlevel", upgradeLevel);
 		PlayerPrefs.SetInt (name + "_defaultcount", count);
 		PlayerPrefs.SetFloat (name + "_defaultcost", cost);
 		PlayerPrefs.SetFloat ("defaultonionsSpendOnUpgrades", onionsSpendOnUpgrades);
-
 	}
 
 	public void Unlock() {
@@ -43,7 +44,8 @@ public class UpgradeManager : MonoBehaviour {
 		itemB.GetComponent<Image>().enabled = true;
 		itemB.GetComponent<Button>().enabled = true;
 		text.gameObject.GetComponent<Text> ().enabled = true;
-		Debug.Log (itemB.name + " was unlocked");
+		//Debug.Log (itemB.name + " was unlocked");
+		image.gameObject.GetComponent<Image> ().enabled = true;
 	}
 
 	void Update(){
@@ -78,6 +80,7 @@ public class UpgradeManager : MonoBehaviour {
 			itemB.GetComponent<Image>().enabled = false;
 			itemB.GetComponent<Button>().enabled = false;
 			text.gameObject.GetComponent<Text> ().enabled = false;
+			image.gameObject.GetComponent<Image> ().enabled = false;
 		}
 
 		if (Input.GetKeyDown (KeyCode.S)) {
@@ -104,8 +107,12 @@ public class UpgradeManager : MonoBehaviour {
 			upgradeLevel += 1;
 			click.onionsPerClick += clickMultiplier;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
+
+			Debug.Log (name + " upgraded to level " + upgradeLevel);
+
 			if (upgradeLevel == 10) {
-				AcceleratingStars.AccelerateStars();				
+				AcceleratingStars.AccelerateStars();		
+				Debug.Log (itemB.name + " was unlocked");
 			}
 		}
 	}
@@ -132,6 +139,4 @@ public class UpgradeManager : MonoBehaviour {
 
 		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("defaultonionsSpendOnUpgrades");
 	}
-
-
 }
