@@ -9,7 +9,8 @@ public class Click : MonoBehaviour {
 	public float onionsCount = 0f;
 	public float onionsPerClick = 1f;
 	public Text OPC;
-	private float onionsSpendInTotal;
+
+    private float onionsSpendInTotal;
 	private float onionsSpendInTotalK;
 	private float onionsSpendInTotalM;
 	private float onionsSpendInTotalB;
@@ -26,14 +27,15 @@ public class Click : MonoBehaviour {
 	private float onionsCountB;
 	private float onionsCountT;
 
+
 	void Start(){
 		PlayerPrefs.SetFloat ("defaultonionsPerClick", onionsPerClick);
-		PlayerPrefs.SetFloat ("defaultonionsCount", onionsCount);
+		PlayerPrefs.SetFloat ("defaultonionsCount", onionsCount);        
+    }
 
-	}
+    void Update(){
 
-	void Update(){		
-		onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; 
+        onionsSpendInTotal = ItemManager.onionsSpendOnItems + UpgradeManager.onionsSpendOnUpgrades; 
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 		if (onionsCount < 1000f) {
@@ -58,25 +60,25 @@ public class Click : MonoBehaviour {
 		///////////////////////////////////////////////////////////////////////////////////////////////////
 		if (onionsPerClick < 1000f) {
 			OPC.text = "Onions/Click\n" + onionsPerClick.ToString ();
-		}
-		if (onionsPerClick >= 1000f && onionsPerClick < 1000000f) {
+        }
+        if (onionsPerClick >= 1000f && onionsPerClick < 1000000f) {
 			onionsPerClickK = onionsPerClick/1000f;
-			OPC.text = "Onions/Click\n" + onionsPerClickK.ToString ("f2") + "K";
-		}
-		if (onionsPerClick >= 1000000f && onionsPerClick < 1000000000f) {
+            OPC.text = "Onions/Click\n" + onionsPerClickK.ToString("f2") + "K";
+        }
+        if (onionsPerClick >= 1000000f && onionsPerClick < 1000000000f) {
 			onionsPerClickM = onionsPerClick/1000000f;
-			OPC.text = "Onions/Click\n" + onionsPerClickM.ToString ("f2") + "M";
-		}
-		if (onionsPerClick >= 1000000000f && onionsPerClick < 1000000000000f) {
+            OPC.text = "Onions/Click\n" + onionsPerClickM.ToString("f2") + "M";
+        }
+        if (onionsPerClick >= 1000000000f && onionsPerClick < 1000000000000f) {
 			onionsPerClickB = onionsPerClick/1000000000f;
-			OPC.text = "Onions/Click\n" + onionsPerClickB.ToString ("f2") + "B";
-		}
-		if (onionsPerClick >= 1000000000000f) {
+            OPC.text = "Onions/Click\n" + onionsPerClickB.ToString("f2") + "B";
+        }
+        if (onionsPerClick >= 1000000000000f) {
 			onionsPerClickT = onionsPerClick/1000000000000f;
-			OPC.text = "Onions/Click\n" + onionsPerClickT.ToString ("f2") + "T";
-		}
-		///////////////////////////////////////////////////////////////////////////////////////////////////
-		if (onionsSpendInTotal < 1000f) {
+            OPC.text = "Onions/Click\n" + onionsPerClickT.ToString("f2") + "T";
+        }
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+        if (onionsSpendInTotal < 1000f) {
 			onionsSpendInTotalText.text = "Onions Spent\n" + onionsSpendInTotal.ToString ();
 		}
 		if (onionsSpendInTotal >= 1000f && onionsSpendInTotal < 1000000f) {
@@ -95,9 +97,7 @@ public class Click : MonoBehaviour {
 			onionsSpendInTotalT = onionsSpendInTotal/1000000000000f;
 			onionsSpendInTotalText.text = "Onions Spent\n" + onionsSpendInTotalT.ToString ("f2") + "T";
 		}
-		///////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+		///////////////////////////////////////////////////////////////////////////////////////////////////        
 		if (Input.GetKeyDown (KeyCode.ScrollLock)) {
 			CheatClick (); // debug cheat adding 100 onions/click
 			Debug.Log ("CheatKey");
@@ -106,15 +106,18 @@ public class Click : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.S)) {
 			SaveGame();}
 		if (Input.GetKeyDown (KeyCode.L)) {
- 			LoadGame();}
-	}
+ 			LoadGame();
+        }
+    }
 
 	public void Clicked (){		
 		onionsCount += onionsPerClick; // what happens when user clicks
-		Debug.Log ("Click, "+ "Onions: " + onionsCount);
-	}
+		Debug.Log ("Click, "+ "Onions: " + onionsCount);        
 
-	public void CheatClick (){
+        FloatingTextManager.Instance.CreateText(Input.mousePosition, "+ " + onionsPerClick);        
+    }
+
+    public void CheatClick (){
 		onionsPerClick += 1000000f; // debug cheat adding 100 onions/click
 		Debug.Log ("CheatClick");
 	}
