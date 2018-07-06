@@ -34,8 +34,9 @@ public class ItemManager : MonoBehaviour {
 
 		PlayerPrefs.SetInt (name + "_defaultlevel", itemLevel);
 		PlayerPrefs.SetInt(name + "_defaultcount", count);
-		PlayerPrefs.SetFloat(name + "_defaultcost", cost);
-		PlayerPrefs.SetFloat ("defaultonionsSpendOnItems", onionsSpendOnItems);
+        PlayerPrefs.SetFloat(name + "_defaultcost", cost);
+        PlayerPrefs.SetFloat(name + "_defaultTickValue", tickValue);
+        PlayerPrefs.SetFloat ("defaultonionsSpendOnItems", onionsSpendOnItems);
 	}
 
 	public void Unlock() {
@@ -117,21 +118,23 @@ public class ItemManager : MonoBehaviour {
 	public void SaveGame(){
 		PlayerPrefs.SetInt (name + "_level", itemLevel);
 		PlayerPrefs.SetInt(name + "_count", count);
-		PlayerPrefs.SetFloat(name + "_cost", cost);
-
-		PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
+        PlayerPrefs.SetFloat(name + "_cost", cost);
+        PlayerPrefs.SetFloat(name + "_tickValue", tickValue);
+        PlayerPrefs.SetFloat ("onionsSpendOnItems", onionsSpendOnItems);
 	}
 	public void LoadGame(){        
 		itemLevel = PlayerPrefs.GetInt (name + "_level");
 		count = PlayerPrefs.GetInt(name + "_count");
-		cost = PlayerPrefs.GetFloat(name + "_cost");
-		onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
+        cost = PlayerPrefs.GetFloat(name + "_cost");
+        tickValue = PlayerPrefs.GetFloat(name + "_tickValue");
+        onionsSpendOnItems = PlayerPrefs.GetFloat ("onionsSpendOnItems");
 	}
 
 	public void DefaultItemManagerLevel(){
 		itemLevel = PlayerPrefs.GetInt (name + "_defaultlevel");
 		count = PlayerPrefs.GetInt(name + "_defaultcount");
-		cost = PlayerPrefs.GetFloat(name + "_defaultcost");
-		onionsSpendOnItems = PlayerPrefs.GetFloat ("defaultonionsSpendOnItems");
+        cost = PlayerPrefs.GetFloat(name + "_defaultcost");
+        tickValue = PlayerPrefs.GetFloat(name + "_defaultTickValue");
+        onionsSpendOnItems = PlayerPrefs.GetFloat ("defaultonionsSpendOnItems");
 	}		
 }

@@ -37,8 +37,9 @@ public class UpgradeManager : MonoBehaviour {
 
 		PlayerPrefs.SetInt (name + "_defaultlevel", upgradeLevel);
 		PlayerPrefs.SetInt (name + "_defaultcount", count);
-		PlayerPrefs.SetFloat (name + "_defaultcost", cost);
-		PlayerPrefs.SetFloat ("defaultonionsSpendOnUpgrades", onionsSpendOnUpgrades);
+        PlayerPrefs.SetFloat (name + "_defaultcost", cost);
+        PlayerPrefs.SetFloat (name + "_defaultClickMultiplier", clickMultiplier);
+        PlayerPrefs.SetFloat ("defaultonionsSpendOnUpgrades", onionsSpendOnUpgrades);
 	}
 
 	public void Unlock() {
@@ -123,23 +124,27 @@ public class UpgradeManager : MonoBehaviour {
 	public void SaveGame(){
 		PlayerPrefs.SetInt (name + "_level", upgradeLevel);
 		PlayerPrefs.SetInt (name + "_count", count);
-		PlayerPrefs.SetFloat (name + "_cost", cost);
+        PlayerPrefs.SetFloat(name + "_cost", cost);
+        PlayerPrefs.SetFloat(name + "_clickMultiplier", clickMultiplier);
 
-		PlayerPrefs.SetFloat ("onionsSpendOnUpgrades", onionsSpendOnUpgrades);
+        PlayerPrefs.SetFloat ("onionsSpendOnUpgrades", onionsSpendOnUpgrades);
 	}
 	public void LoadGame(){		
 		upgradeLevel = PlayerPrefs.GetInt (name + "_level");
 		count = PlayerPrefs.GetInt (name + "_count");
-		cost = PlayerPrefs.GetFloat (name + "_cost");
+        cost = PlayerPrefs.GetFloat(name + "_cost");
+        clickMultiplier = PlayerPrefs.GetFloat(name + "_clickMultiplier");
 
-		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
+        onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("onionsSpendOnUpgrades");
 	}
 
 	public void DefaultUpgradeManagerLevel(){
 		upgradeLevel = PlayerPrefs.GetInt (name + "_defaultlevel");
 		count = PlayerPrefs.GetInt (name + "_defaultcount");
-		cost = PlayerPrefs.GetFloat (name + "_defaultcost");
+        cost = PlayerPrefs.GetFloat(name + "_defaultcost");
+        clickMultiplier = PlayerPrefs.GetFloat(name + "_defaultClickMultiplier");
 
-		onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("defaultonionsSpendOnUpgrades");
+        
+        onionsSpendOnUpgrades = PlayerPrefs.GetFloat ("defaultonionsSpendOnUpgrades");
 	}
 }
