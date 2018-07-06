@@ -109,7 +109,7 @@ public class UpgradeManager : MonoBehaviour {
 			upgradeLevel += 1;
 			click.onionsPerClick += clickMultiplier;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.20f, count));
-            clickMultiplier = Mathf.Round (baseClickMultiplier * Mathf.Pow (1.01f, count));
+            clickMultiplier = Mathf.Round (baseClickMultiplier * Mathf.Pow (1.015f, count));
 
             Debug.Log (name + " upgraded to level " + upgradeLevel);
 

@@ -26,8 +26,6 @@ public class ItemManager : MonoBehaviour {
 	private float costB;
 	private float costT;
 
-
-
 	void Start(){
         baseCost = cost;
         baseTickValue = tickValue;
@@ -105,7 +103,7 @@ public class ItemManager : MonoBehaviour {
 			count += 1;
 			itemLevel += 1;
 			cost = Mathf.Round (baseCost * Mathf.Pow (1.20f, count));
-            tickValue = Mathf.Round(baseTickValue * Mathf.Pow(1.01f, count));
+            tickValue = Mathf.Round(baseTickValue * Mathf.Pow(1.02f, count));
 
             Debug.Log (name + " upgraded to level " + itemLevel);
 
