@@ -8,15 +8,16 @@ public class ItemManager : MonoBehaviour {
 	public Text itemInfo;
 	public Click click;
 	public float cost;
-	public int tickValue;
+	public float tickValue;
 	public int count;
 	public string itemName;
 	public GameObject itemB;
 	public int itemLevel = 0;
 	public static float onionsSpendOnItems = 0f;
 
-	private float baseCost;
-	private Transform text;
+    private float baseCost;
+    private float baseTickValue;
+    private Transform text;
 	private Transform image;
 
 	public Text costText;
@@ -28,8 +29,9 @@ public class ItemManager : MonoBehaviour {
 
 
 	void Start(){
-		baseCost = cost;
-		text = itemB.transform.Find ("Text");
+        baseCost = cost;
+        baseTickValue = tickValue;
+        text = itemB.transform.Find ("Text");
 		image = itemB.transform.Find ("Image");
 
 		PlayerPrefs.SetInt (name + "_defaultlevel", itemLevel);
@@ -102,9 +104,10 @@ public class ItemManager : MonoBehaviour {
 
 			count += 1;
 			itemLevel += 1;
-			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
+			cost = Mathf.Round (baseCost * Mathf.Pow (1.20f, count));
+            tickValue = Mathf.Round(baseTickValue * Mathf.Pow(1.01f, count));
 
-			Debug.Log (name + " upgraded to level " + itemLevel);
+            Debug.Log (name + " upgraded to level " + itemLevel);
 
 			if (itemLevel == 10) {
 				AcceleratingStars.AccelerateStars();		

@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +32,8 @@ public class Click : MonoBehaviour {
 
 	void Start(){
 		PlayerPrefs.SetFloat ("defaultonionsPerClick", onionsPerClick);
-		PlayerPrefs.SetFloat ("defaultonionsCount", onionsCount);        
+		PlayerPrefs.SetFloat ("defaultonionsCount", onionsCount);
+
     }
 
     void Update(){
@@ -112,9 +115,10 @@ public class Click : MonoBehaviour {
 
 	public void Clicked (){		
 		onionsCount += onionsPerClick; // what happens when user clicks
-		Debug.Log ("Click, "+ "Onions: " + onionsCount);        
+		Debug.Log ("Click, "+ "Onions: " + onionsCount);
 
-        FloatingTextManager.Instance.CreateText(Input.mousePosition, "+ " + onionsPerClick);        
+        CultureInfo ci = new CultureInfo("en-us");
+        FloatingTextManager.Instance.CreateText(Input.mousePosition, "+ " + onionsPerClick.ToString("N00", ci));        
     }
 
     public void CheatClick (){

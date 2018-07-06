@@ -9,15 +9,16 @@ public class UpgradeManager : MonoBehaviour {
 	public Text itemInfo;
 	public float cost;
 	public int count = 0;
-	public int clickMultiplier;
+	public float clickMultiplier;
 	public string itemName;
 	public int upgradeLevel;
 	public GameObject itemB;
 	public static float onionsSpendOnUpgrades = 0f;
 
 	private float _newCost;
-	private float baseCost;
-	private Transform text;
+    private float baseCost;
+    private float baseClickMultiplier;
+    private Transform text;
 	private Transform image;
 	public Text costText;
 	private float costK;
@@ -30,6 +31,7 @@ public class UpgradeManager : MonoBehaviour {
 
 	void Start(){
 		baseCost = cost;
+        baseClickMultiplier = clickMultiplier;
 		text = itemB.transform.Find ("Text");
 		image = itemB.transform.Find ("Image");
 
@@ -106,9 +108,10 @@ public class UpgradeManager : MonoBehaviour {
 			count += 1;
 			upgradeLevel += 1;
 			click.onionsPerClick += clickMultiplier;
-			cost = Mathf.Round (baseCost * Mathf.Pow (1.15f, count));
+			cost = Mathf.Round (baseCost * Mathf.Pow (1.20f, count));
+            clickMultiplier = Mathf.Round (baseClickMultiplier * Mathf.Pow (1.01f, count));
 
-			Debug.Log (name + " upgraded to level " + upgradeLevel);
+            Debug.Log (name + " upgraded to level " + upgradeLevel);
 
 			if (upgradeLevel == 10) {
 				AcceleratingStars.AccelerateStars();		

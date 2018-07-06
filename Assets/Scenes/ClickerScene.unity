@@ -517,11 +517,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -842,9 +842,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 1084999593}
   itemInfo: {fileID: 1137873822}
-  cost: 200
+  cost: 500
   count: 0
-  clickMultiplier: 5
+  clickMultiplier: 4
   itemName: Medium Bucket
   upgradeLevel: 0
   itemB: {fileID: 241170496}
@@ -2532,9 +2532,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 1084999593}
   itemInfo: {fileID: 1597951753}
-  cost: 1000
+  cost: 10000
   count: 0
-  clickMultiplier: 10
+  clickMultiplier: 9
   itemName: Large Bucket
   upgradeLevel: 0
   itemB: {fileID: 289343134}
@@ -2862,7 +2862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &251988729
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8067,9 +8067,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 1084999593}
   itemInfo: {fileID: 99640580}
-  cost: 4500
+  cost: 100000
   count: 0
-  clickMultiplier: 25
+  clickMultiplier: 18
   itemName: Big Bucket
   upgradeLevel: 0
   itemB: {fileID: 1215922308}
@@ -9731,11 +9731,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -12155,8 +12155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemInfo: {fileID: 1752146938}
   click: {fileID: 1084999593}
-  cost: 25000
-  tickValue: 50
+  cost: 1400000
+  tickValue: 40
   count: 0
   itemName: Robo-Worker
   itemB: {fileID: 2051978702}
@@ -18942,7 +18942,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 19.2}
-  m_SizeDelta: {x: 130, y: 125}
+  m_SizeDelta: {x: 200, y: 166.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084999593
 MonoBehaviour:
@@ -19522,11 +19522,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -21000,9 +21000,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 1084999593}
   itemInfo: {fileID: 260121719}
-  cost: 12000
+  cost: 1000000
   count: 0
-  clickMultiplier: 60
+  clickMultiplier: 48
   itemName: Mega Bucket
   upgradeLevel: 0
   itemB: {fileID: 1097288057}
@@ -21369,11 +21369,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -22531,11 +22531,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -22984,8 +22984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemInfo: {fileID: 1471681743}
   click: {fileID: 1084999593}
-  cost: 600
-  tickValue: 5
+  cost: 1500
+  tickValue: 3
   count: 0
   itemName: Good Worker
   itemB: {fileID: 2101530594}
@@ -26617,8 +26617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemInfo: {fileID: 772353663}
   click: {fileID: 1084999593}
-  cost: 8000
-  tickValue: 35
+  cost: 160000
+  tickValue: 14
   count: 0
   itemName: Super Worker
   itemB: {fileID: 814809949}
@@ -27070,11 +27070,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -30327,8 +30327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemInfo: {fileID: 1978303434}
   click: {fileID: 1084999593}
-  cost: 1850
-  tickValue: 15
+  cost: 17500
+  tickValue: 6
   count: 0
   itemName: Great Worker
   itemB: {fileID: 1838713533}
